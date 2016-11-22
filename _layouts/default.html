@@ -1,0 +1,20 @@
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<ul id="sidemenu" class="dropdown-content">
+  {% for item in site.data.sidebar %}
+  <li><a href={{ item.url }}>{{ item.title }}</a></li>
+  {% endfor %}
+</ul>
+
+<nav class="z-depth-0">
+    <div class="nav-wrapper green accent-2">
+      <img src="Logo64x64.png" class="brand-logo center">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+	<li><a class="dropdown-button" href="#" data-activates="sidemenu">Click me!</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>
