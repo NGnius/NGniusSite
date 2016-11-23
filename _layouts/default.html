@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection">
+<link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection">
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="/js/materialize.min.js"></script>
+<title>NGnius</title>
 
 <body>
  <ul id="sidemenu" class="dropdown-content">
@@ -14,9 +15,9 @@
 
  <nav class="z-depth-0">
    <div class="nav-wrapper green accent-2">
-     <img src="Logo64x64.png" class="brand-logo center">
+     <img src="/Logo64x64.png" class="brand-logo center">
      <ul id="nav-mobile" class="left hide-on-med-and-down">
-	<li><a class="dropdown-button" href="#" data-activates="sidemenu">Menu</a></li>
+	<li><a class="dropdown-button" href="#" data-activates="sidemenu">Navigation Menu</a></li>
 	{% for item in site.data.topleftnavbar %}
         <li><a href={{item.url}}>{{item.title}}</a></li>
 	{% endfor %}
