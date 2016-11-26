@@ -5,7 +5,7 @@ layout: default
 {% for item in site.data.links %}
 <div class="card horizontal hoverable z-depth-0 blue-grey lighten-4">
  <div class="card-content">
-  <a href={{item.url}} class="valign-wrapper"><img src={{item.img}}>{{item.title}}</a>
+  <a href={{item.url}} class="valign-wrapper"><img src={{item.img}} height=64 width=64>{{item.title}}</a>
  </div>
 </div>
 {% endfor %}
