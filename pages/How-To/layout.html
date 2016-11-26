@@ -11,7 +11,15 @@ layout: default
 </div>
 <script>
 $(document).ready(function(){
-    $('iframe').attr('width', ($(window).width()*2/3))
+    var windowW = $(window).width()
+
+    if (windowW > 999) {
+    $('iframe').attr('width', (windowW*0.65))
+    $('iframe').attr('height',($('iframe').attr('width')*9/16));
+}
+    else {
+    $('iframe').attr('width', windowW*0.95)
     $('iframe').attr('height',($('iframe').attr('width')/1.5));
+}
 })
 </script>
