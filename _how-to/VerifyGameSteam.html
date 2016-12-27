@@ -1,0 +1,36 @@
+---
+layout: default+
+title: How To Verify a Game's Files (Steam)
+---
+<div class="row">
+ <div class="col s12 m12 l8 z-depth-1">
+ <div class="center">
+ <iframe src=https://www.youtube.com/embed/7mryPCjeDXw></iframe>
+ </div>
+ </div>
+ <div class="col s12 m12 l4 z-depth-1">
+ <p>
+ 1. Open your Steam Library <br>
+ 2. Right Click on Robocraft or whatever game your want to verify the game files of<br>
+ 3. Select Properties<br>
+ 4. Select Local Files tab<br>
+ 5. Select Verify Integrity of Game Cache...<br>
+ 6. Wait for it to complete and then click OK<br>
+ 7. Congratulations, you have verified the game! Now go test the game out to see if that fixed your problem.<br>
+ </p>
+ </div>
+
+<script>
+$(document).ready(function(){
+    var windowW = $(window).width()
+
+    if (windowW > 999) {
+    $('iframe').attr('width', (windowW*0.65))
+    $('iframe').attr('height',($('iframe').attr('width')*9/16));
+}
+    else {
+    $('iframe').attr('width', windowW*0.95)
+    $('iframe').attr('height',($('iframe').attr('width')/1.5));
+}
+})
+</script>

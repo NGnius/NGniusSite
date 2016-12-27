@@ -1,0 +1,33 @@
+---
+layout: default+
+title: How To Verify a Game's Files (Robocraft Launcher)
+---
+<div class="row">
+ <div class="col s12 m12 l8 z-depth-1">
+ <iframe src=https://www.youtube.com/embed/1hw0lK-r6gM></iframe>
+ </div>
+ <div class="col s12 m12 l4 z-depth-1">
+ <p>
+ 1. Open Robocraft Launcher<br>
+ 2. Wait for wrench to appear (the launcher usually does a quick update check everytime it opens, so that has to finish before the wrench will appear)<br>
+ 3. Select wrench icon<br>
+ 4. Select Ok<br>
+ 5. Wait for it to complete<br>
+ 6. Congratulations, you have verified the game! Now go test the game out to see if that fixed your problem.<br>
+ </p>
+ </div>
+
+<script>
+$(document).ready(function(){
+    var windowW = $(window).width()
+
+    if (windowW > 999) {
+    $('iframe').attr('width', (windowW*0.65))
+    $('iframe').attr('height',($('iframe').attr('width')*9/16));
+}
+    else {
+    $('iframe').attr('width', windowW*0.95)
+    $('iframe').attr('height',($('iframe').attr('width')/1.5));
+}
+})
+</script>

@@ -1,0 +1,26 @@
+---
+layout: default+
+title: 
+---
+<div class="row">
+ <div class="col s12 m12 l8 z-depth-1">
+ [Youtube Video]
+ </div>
+ <div class="col s12 m12 l4 z-depth-1">
+ [Written Instructions]
+ </div>
+
+<script>
+$(document).ready(function(){
+    var windowW = $(window).width()
+
+    if (windowW > 999) {
+    $('iframe').attr('width', (windowW*0.65))
+    $('iframe').attr('height',($('iframe').attr('width')*9/16));
+}
+    else {
+    $('iframe').attr('width', windowW*0.95)
+    $('iframe').attr('height',($('iframe').attr('width')/1.5));
+}
+})
+</script>
