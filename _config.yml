@@ -31,7 +31,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - _How_To/layout.html
+  - _how-to/layout.html
 
 collections:
  how-to:
