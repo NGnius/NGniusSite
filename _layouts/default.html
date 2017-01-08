@@ -7,17 +7,11 @@
 <title>{{ page.title }}</title>
 
 <body>
- <ul id="sidemenu" class="dropdown-content">
-  {% for item in site.data.sidebar %}
-  <li><a href={{ item.url }}>{{ item.title }}</a></li>
-  {% endfor %}
- </ul>
-
  <nav class="z-depth-0">
    <div class="nav-wrapper green accent-2">
      <a href="/"><img src="/Logo64x64.png" class="brand-logo center"></a>
      <ul id="nav-mobile" class="left">
-	<li><a class="dropdown-button" href="#" data-activates="sidemenu">Navigation Menu</a></li>
+	{% include sidebar.html %}
 	{% for item in site.data.topleftnavbar %}
         <li class="hide-on-med-and-down"><a href={{item.url}}>{{item.title}}</a></li>
 	{% endfor %}
@@ -29,6 +23,7 @@
      </ul>
    </div>
  </nav>
+
  {{content}}
 </body>
 </html>
