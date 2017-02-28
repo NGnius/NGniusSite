@@ -8,17 +8,17 @@
 
 <body>
  <nav class="z-depth-0">
-   <div class="nav-wrapper green accent-2">
-     <a href="/"><img src="/Logo64x64.png" class="brand-logo center"></a>
+   <div class="nav-wrapper {% include colour1.html%}">
+     <a href="/" class="brand-logo center"><img src="/Logo64x64.png" height=100%></a>
      <ul id="nav-mobile" class="left">
 	{% include sidebar.html %}
 	{% for item in site.data.topleftnavbar %}
-        <li class="hide-on-med-and-down"><a href={{item.url}}>{{item.title}}</a></li>
+        <li class="hide-on-med-and-down"><a href={{item.url}} class="{% include colour2text.html%}">{{item.title}}</a></li>
 	{% endfor %}
      </ul>
      <ul id="nav-mobile" class="right hide-on-med-and-down">
 	{% for item in site.data.toprightnavbar %}
-        <li><a href={{item.url}}>{{item.title}}</a></li>
+        <li class="hide-on-med-and-down"><a href={{item.url}}  class="{% include colour2text.html%}">{{item.title}}</a></li>
 	{% endfor %}
      </ul>
    </div>

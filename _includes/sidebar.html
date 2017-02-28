@@ -1,12 +1,12 @@
 <ul id="sidemenu" class="side-nav">
- <li><div class="green accent-2">
-  <a href="/" class="center-align"><img src="/Logo64x64.png" height=48></a>
+ <li><div class="{% include colour1.html%}">
+  <a href="/" class="center-align"><img src="/Logo64x64.png" height=100%></a>
  </div></li>
  {% for item in site.data.sidebar %}
   <li><a href={{ item.url }}>{{ item.title }}</a></li>
  {% endfor %}
 </ul>
-<li><a class="button-collapse show-on-large" href="#" data-activates="sidemenu">Navigation Menu</a></li>
+<li><a class="button-collapse show-on-large  {% include colour2text.html%}" href="#" data-activates="sidemenu">Navigation Menu</a></li>
 <script>
 $(".button-collapse").sideNav();
 </script>
