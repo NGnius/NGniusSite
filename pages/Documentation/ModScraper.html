@@ -7,7 +7,8 @@ layout : default
       <div class="card-content">
         <h2 class="center">ModScraper</h2>
         <p>
-          The program that currently doesn't do much, except find olds posts that have been bumped.
+          The program that currently only detects profanity listed in Profanity.txt and bumps from a different year.
+          The program checks the specified forum sections listed in ForumsToCheck.txt.
           This only works with the formating in the Robocraft forum sections at the moment.
           Sorry!
         </p>
@@ -18,8 +19,11 @@ layout : default
     <a href="https://github.com/NGnius/ModScraper">
       <div class="card">
         <div class="card-image">
-          <img class="center" src="http://www.aha.io/assets/integration_logos/github-bb449e0ffbacbcb7f9c703db85b1cf0b.png" width=100%/>
+          <img class="center" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" width=100%/>
           <br />
+
+        </div>
+        <div class="card-content">
           <span class="card-title {% include colour1text.html %}">
             Github Repository
           </span>
@@ -40,13 +44,37 @@ layout : default
         </p>
 
         <li>
-          Detect a necro by running necroDetector.py
+          Detect profanity by running profanityDetector.profanityDetector()
+        </li>
+        <li>
+          Detect profanity in the last post by running profanityDetector.detectProfanity(url)
         </li>
         <li>
           Choose what sections to monitor by adding or removing URLs in Resources/ForumsToCheck.txt
         </li>
         <li>
-          All of necroDetector.py's dependencies are found in /Resources (which is nothing but the ForumsToCheck.txt file right now)
+          Choose what words to count as swear words by adding or removing words in Resources/Profanity.txt
+        </li>
+        <li>
+          All of profanityDetector.py's dependencies are found in /Resources
+        </li>
+
+        <br />
+        <p class="center" >
+          <strong>necroDetector.py features</strong>
+        </p>
+
+        <li>
+          Detect a necro by running necroDetector.necroDetector
+        </li>
+        <li>
+          Detect a necro in the last post by running necroDetector.detectNecro(url)
+        </li>
+        <li>
+          Choose what sections to monitor by adding or removing URLs in Resources/ForumsToCheck.txt
+        </li>
+        <li>
+          All of necroDetector.py's dependencies are found in /Resources (which is only ForumsToCheck.txt)
         </li>
 
 
@@ -81,10 +109,7 @@ layout : default
       <div class="card-content">
         <span class="card-title">Future Features (hopefully)</span>
         <li>
-          More monitoring options (swear detection, spam detection, etc.)
-        </li>
-        <li>
-          Add server functionality (make it possible to run everything continuously, autonomously)
+          More monitoring options (spam detection, inappropriate username detection, etc.)
         </li>
         <li>
           Make it run on a server (I have a Raspberry Pi that's going unused)
@@ -97,6 +122,12 @@ layout : default
         </li>
         <li>
           Add support for custom forum layout processing
+        </li>
+        <li>
+          Make it check every post in the section instead of just the first post
+        </li>
+        <li>
+          Add a configuration file
         </li>
       </div>
     </div>
