@@ -19,7 +19,7 @@ layout : default
     <a href="https://github.com/NGnius/ModScraper">
       <div class="card">
         <div class="card-image">
-          <img class="center" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" width=100%/>
+          <img class="center" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png"/>
           <br />
 
         </div>
@@ -40,14 +40,31 @@ layout : default
 
         <br />
         <p class="center" >
-          <strong>necroDetector.py features</strong>
+          <strong>capsDetector.py features (not yet fully implemented)</strong>
+        </p>
+
+        <li>
+          Detect ALL CAPS TITLES!!! by running capsDetector.capsTDetector()
+        </li>
+        <li>
+          Detect ERMMAGHEERRDH CAPS TITLES in the last post by running capsDetector.detectCapsT(url [,mode])
+        </li>
+        <li>
+          Choose what sections to monitor by adding or removing URLs in Resources/ForumsToCheck.txt
+        </li>
+        <li>
+          All of capsDetector.py's dependencies are found in /Resources
+        </li>
+
+        <p class="center" >
+          <strong>profanityDetector.py features</strong>
         </p>
 
         <li>
           Detect profanity by running profanityDetector.profanityDetector()
         </li>
         <li>
-          Detect profanity in the last post by running profanityDetector.detectProfanity(url)
+          Detect profanity in the last post by running profanityDetector.detectProfanity(url [,mode])
         </li>
         <li>
           Choose what sections to monitor by adding or removing URLs in Resources/ForumsToCheck.txt
@@ -68,7 +85,7 @@ layout : default
           Detect a necro by running necroDetector.necroDetector
         </li>
         <li>
-          Detect a necro in the last post by running necroDetector.detectNecro(url)
+          Detect a necro in the last post by running necroDetector.detectNecro(url [,mode])
         </li>
         <li>
           Choose what sections to monitor by adding or removing URLs in Resources/ForumsToCheck.txt
@@ -84,7 +101,7 @@ layout : default
         </p>
 
         <li>
-          Retrieve pages with scraper.page.ret([url])
+          Retrieve pages with scraper.page.ret(url)
         </li>
         <li>
           Raw HTML page storage in scraper.page.raw
@@ -93,10 +110,10 @@ layout : default
           HTML-less page (anything between a < and > are ignored) storage in scraper.page.text
         </li>
         <li>
-          Search strings with scraper.wordSearcher.wordSearcher([string to find], [string to search])
+          Search strings with scraper.wordSearcher.wordSearcher(string to find, string to search)
         </li>
         <li>
-          Search scraper.page.text with scraper.find([string to find])
+          Search scraper.page.text with scraper.find(string to find)
         </li>
         <li>
           All of scraper.py's dependencies are found in /scraperResources
@@ -127,7 +144,7 @@ layout : default
           Make it check every post in the section instead of just the first post
         </li>
         <li>
-          Add a configuration file
+          Add a configuration and/or settings file
         </li>
       </div>
     </div>
