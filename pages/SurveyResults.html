@@ -1,0 +1,34 @@
+---
+layout: default+
+title: Robocraft Performance Charts
+---
+<div class="row">
+  <div class="col s10 offset-s1">
+    <a href="https://goo.gl/forms/YxH2uFYGHijCZfk12">
+      <div class="card {% include colour1.html%}">
+        <div class="card-content center">
+          Fill out the survey yourself!
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+<div class="row">
+  <div class="col s12 m8">
+    <iframe id="tomato" width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1Mm1K_EUDUsrOw4Nzko552MxfvRoyTh4860cV7UPACdg/pubchart?oid=204269090&amp;format=interactive"></iframe>
+    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1Mm1K_EUDUsrOw4Nzko552MxfvRoyTh4860cV7UPACdg/pubchart?oid=253141727&amp;format=interactive"></iframe>
+    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1Mm1K_EUDUsrOw4Nzko552MxfvRoyTh4860cV7UPACdg/pubchart?oid=1830369662&amp;format=interactive"></iframe>
+    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1Mm1K_EUDUsrOw4Nzko552MxfvRoyTh4860cV7UPACdg/pubchart?oid=1870928846&amp;format=interactive"></iframe>
+    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1Mm1K_EUDUsrOw4Nzko552MxfvRoyTh4860cV7UPACdg/pubchart?oid=206501062&amp;format=interactive"></iframe>
+    <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1Mm1K_EUDUsrOw4Nzko552MxfvRoyTh4860cV7UPACdg/pubchart?oid=1760877709&amp;format=interactive"></iframe>
+    <iframe width="100%" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/1Mm1K_EUDUsrOw4Nzko552MxfvRoyTh4860cV7UPACdg/pubchart?oid=657253888&amp;format=interactive"></iframe>
+  </div>
+  <div class="col s12 m4">
+    <iframe id="potato" width="100%" height="100%" src="https://docs.google.com/spreadsheets/d/1Mm1K_EUDUsrOw4Nzko552MxfvRoyTh4860cV7UPACdg/pubhtml?widget=true&amp;headers=false"></iframe>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+potato.height = tomato.height * 4
+})
+</script>
