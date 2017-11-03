@@ -38,20 +38,26 @@ title: Robocraft Forum Scraper Info
     <div class="card {% include colour2.html %}">
       <div class="card-content">
         <span class="card-title">Current Features</span>
-
-        <br />
-        <p class="center" >
-          <strong>capsDetector.py features (not yet fully implemented)</strong>
+        <p class="center">
+          <strong>General features</strong>
         </p>
 
         <li>
-          Detect ALL CAPS TITLES!!! by running capsDetector.capsTDetector()
+          General purpose scraper.py modified for forum scraping
         </li>
         <li>
-          Detect ERMMAGHEERRDH CAPS TITLES in the last post by running capsDetector.detectCapsT(url [,mode])
+          Configure general behaviour with /Resources/config.txt
         </li>
         <li>
-          Choose what sections to monitor by adding or removing URLs in Resources/ForumsToCheck.txt
+          Choose what forum sections to scrape with /Resources/ForumsToCheck.txt
+        </li>
+        <br />
+        <p class="center" >
+          <strong>capsDetector.py notable features</strong>
+        </p>
+
+        <li>
+          Detect all caps titles with capsDetector.isCapsTitle(post, caps threshold)
         </li>
         <li>
           All of capsDetector.py's dependencies are found in /Resources
@@ -62,16 +68,10 @@ title: Robocraft Forum Scraper Info
         </p>
 
         <li>
-          Detect profanity by running profanityDetector.profanityDetector()
+          Detect profanity in posts with profanityDetector.isProfanity(post, swear threshold)
         </li>
         <li>
-          Detect profanity in the last post by running profanityDetector.detectProfanity(url [,mode])
-        </li>
-        <li>
-          Choose what sections to monitor by adding or removing URLs in Resources/ForumsToCheck.txt
-        </li>
-        <li>
-          Choose what words to count as swear words by adding or removing words in Resources/Profanity.txt
+          Choose which profanity will be detected and the weight of it with /Resources/Profanity.txt
         </li>
         <li>
           All of profanityDetector.py's dependencies are found in /Resources
@@ -83,66 +83,46 @@ title: Robocraft Forum Scraper Info
         </p>
 
         <li>
-          Detect a necro by running necroDetector.necroDetector
+          Detect bumped threads with necroDetector.isNecro(post, time delta threshold)
         </li>
         <li>
-          Detect a necro in the last post by running necroDetector.detectNecro(url [,mode])
-        </li>
-        <li>
-          Choose what sections to monitor by adding or removing URLs in Resources/ForumsToCheck.txt
-        </li>
-        <li>
-          All of necroDetector.py's dependencies are found in /Resources (which is only ForumsToCheck.txt)
-        </li>
-
-
-        <br />
-        <p class="center">
-          <strong>scraper.py features</strong>
-        </p>
-
-        <li>
-          Retrieve pages with scraper.page.ret(url)
-        </li>
-        <li>
-          Raw HTML page storage in scraper.page.raw
-        </li>
-        <li>
-          HTML-less page (anything between a < and > are ignored) storage in scraper.page.text
-        </li>
-        <li>
-          Search strings with scraper.wordSearcher.wordSearcher(string to find, string to search)
-        </li>
-        <li>
-          Search scraper.page.text with scraper.find(string to find)
-        </li>
-        <li>
-          All of scraper.py's dependencies are found in /scraperResources
+          All of necroDetector.py's dependencies are found in /Resources
         </li>
       </div>
     </div>
   </div>
+
   <div class="col s12 m6">
     <div class="card {% include colour2.html %}">
       <div class="card-content">
         <span class="card-title">Future Features (hopefully)</span>
+
+        <li>
+          Add timestamps to stuff
+        </li>
+        <li>
+          Improve caps detection to detect in thread content
+        </li>
         <li>
           More monitoring options (spam detection, inappropriate username detection, etc.)
         </li>
         <li>
-          Make it run on a server (I have a Raspberry Pi that's going unused)
+          Add a more in-depth documentation page for the configuration files
         </li>
         <li>
-          Add some sort of notification system (like email or a Discord bot to notify moderators of a broken rule)
+          Add proper logging functionality
+        </li>
+        <li>
+          Add a file output for detected thread issues
+        </li>
+        <li>
+          Add a notification system (like email or a Discord bot to notify moderators of thread issues)
         </li>
         <li>
           Add support for other forums
         </li>
         <li>
           Add support for custom forum layout processing
-        </li>
-        <li>
-          Make it check every post in the section instead of just the first post
         </li>
         <li>
           Add a configuration and/or settings file
